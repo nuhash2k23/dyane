@@ -1,5 +1,14 @@
-import "@/styles/globals.css";
+// pages/_app.jsx
+import React from 'react';
+import { LanguageProvider } from '../Component/context/LanguageContext.jsx';
+import '../styles/globals.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <LanguageProvider>
+      <Component {...pageProps} />
+    </LanguageProvider>
+  );
+};
+
+export default MyApp;

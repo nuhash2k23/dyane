@@ -1,0 +1,68 @@
+The scroll progress (ranging from 0 to 1) is divided into six phases:
+
+Phase 1 (0%–20% Scroll)
+X-Axis Movement:
+The model moves horizontally from a starting position of 0 to a target of 2 (computed as phase1 * 2).
+
+Rotation:
+The model rotates from its initial orientation (0 radians) toward π (-30°). This uses a smoothstep function to ensure a smooth transition.
+
+Camera Adjustments:
+The camera slightly zooms in: its Z-position decreases (from 4 toward 3.5) and its field-of-view (FOV) narrows (from 60 to 55).
+
+Phase 2 (20%–30% Scroll)
+Hold and no Continue Rotation:
+Movement: The model’s X-position holds at 2.
+Rotation: The rotation stays as it is
+Camera:
+The camera zooms in a bit
+Phase 3 (30%–45% Scroll)
+Opposite Side Movement:
+The model shifts on the X-axis from 2 to –2.5, moving across to the opposite side.
+
+Rotation Reset:
+The model’s rotation transitions from -30 to +30
+
+Camera Shift:
+camera stays as it is ,just slightly move on the left like model
+
+Phase 4 (45%–65% Scroll)
+Cap Animation:
+This phase is dedicated to animating the cap:
+The cap’s Y-position moves upward (targeted up to 0.6 units).
+The cap rotates around the Y-axis (up to 1.85π radians) using an easing function for smoothness.
+If the easing value goes past 0.9, a “return” easing effect gradually brings the cap back, giving a natural motion.
+Model and Camera:
+The model’s X-position stays at –2.
+The overall model rotation holds at a small offset (0.2π) to offer a better view of the cap.
+The camera begins moving upward while zooms closer to focus on the cap’s action while looking at the cap
+Phase 5 (65%–95% Scroll)
+Color Transition:
+The scarf’s color transitions in two steps:
+
+First Half (65%–80%): The color shifts from the original color to burgundy using an eased interpolation.
+Second Half (80%–95%): The color then transitions from burgundy to sage green.
+Model Movement:
+During this phase, the model should stay as it is
+
+Rotation and Camera:
+The model makes 360 turns for each color change transitions
+
+Phase 6 (95%–100% Scroll)
+Final Presentation:
+The color then transitions from sage green to original/initial color
+
+X-Axis Movement: position stays as it is
+Y-Axis (Vertical) Sequence:
+First third: The model scales gradually
+Second third: The model scales gradually
+Final third: The model scales gradually
+Rotation Adjustment:
+no rotation needed
+
+Camera Finale:
+The camera goes through a three-step sequence:
+
+ fov increses.
+ fov increses.
+ fov increses.

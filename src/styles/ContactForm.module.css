@@ -1,0 +1,317 @@
+/* ContactForm.module.css */
+@font-face {
+  font-family: 'CasusPro';
+  src: url('/fonts/CasusPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MrsEaves';
+  src: url('/fonts/Mrs-Eaves-OT-Roman_31443.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #111111; /* Dark base color */
+  background-image: linear-gradient(45deg, rgba(25, 25, 25, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+.pageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.15), transparent 70%),
+    radial-gradient(ellipse at bottom left, rgba(212, 175, 55, 0.1), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.formContainer {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(16, 16, 16, 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blurry glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  opacity: 0; /* Initially hidden for animation */
+}
+
+.title {
+  font-family: 'MrsEaves', sans-serif;
+  font-size: 3rem;
+  font-weight: 300; /* Lighter weight */
+  color: #d4af37; /* Gold color */
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px; /* Thinner line */
+  background-color: rgba(212, 175, 55, 0.6); /* Semi-transparent gold */
+}
+
+.intro {
+  font-family: 'CasusPro', serif;
+  font-size: 1.1rem; /* Smaller size */
+  font-weight: 300; /* Lighter weight */
+  color: #cccccc; /* Lighter text color */
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.form {
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.field {
+  margin-bottom: 1.8rem;
+  text-align: left;
+  opacity: 0; /* Initially hidden for animation */
+}
+
+.field label {
+  display: block;
+  font-family: 'CasusPro', sans-serif;
+  font-size: 0.95rem; /* Smaller size */
+  font-weight: 300; /* Lighter weight */
+  margin-bottom: 0.5rem;
+  color: #aaaaaa; /* Lighter color */
+  letter-spacing: 0.5px;
+}
+
+.fieldConsent {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  text-align: left;
+  opacity: 0; /* Initially hidden for animation */
+}
+
+.checkbox {
+  margin-top: 0.3rem;
+  margin-right: 0.8rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #d4af37; /* Gold color for checked state */
+}
+
+.consentLabel {
+  font-family: 'CasusPro', serif;
+  font-size: 0.85rem; /* Smaller size */
+  font-weight: 300; /* Lighter weight */
+  color: #999999;
+  line-height: 1.4;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-family: 'CasusPro', serif;
+  font-size: 1rem;
+  font-weight: 300; /* Lighter weight */
+  color: #e0e0e0; /* Light text for better contrast */
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent input */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.input:focus, .textarea:focus {
+  border-color: rgba(212, 175, 55, 0.5); /* Semi-transparent gold */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  background-color: rgba(255, 255, 255, 0.07); /* Slightly lighter when focused */
+}
+
+.submitButton {
+  padding: 0.9rem 2.3rem; /* Slightly smaller padding */
+  border: none;
+  background-color: rgba(212, 175, 55, 0.8); /* Semi-transparent gold */
+  color: #000; /* Dark text for contrast */
+  font-family: 'MrsEaves', sans-serif;
+  font-size: 1rem;
+  font-weight: 400; /* Not too light for the button */
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.submitButton:hover {
+  background-color: rgba(212, 175, 55, 0.9); /* Slightly more opaque on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+.confirmation {
+  margin: 2rem auto;
+  opacity: 0; /* Initially hidden for animation */
+  max-width: 400px;
+}
+
+.confirmationIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-color: rgba(212, 175, 55, 0.8); /* Semi-transparent gold */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.confirmation p {
+  font-family: 'MrsEaves', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300; /* Lighter weight */
+  color: #d4af37;
+  letter-spacing: 0.5px;
+}
+
+.privacy {
+  margin-top: 2.5rem;
+  font-family: 'CasusPro', serif;
+  font-size: 0.8rem; /* Smaller size */
+  font-weight: 300; /* Lighter weight */
+  color: #777777; /* Subtle color */
+}
+
+.privacy a {
+  color: #999999; /* Slightly lighter */
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.privacy a:hover {
+  color: #d4af37;
+}
+
+/* Optional subtle glow effects for inputs */
+.input:hover, .textarea:hover {
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .formContainer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  .input, .textarea {
+    padding: 0.8rem;
+  }
+  
+  .confirmationIcon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .intro {
+    font-size: 0.95rem;
+  }
+  
+  .field label {
+    font-size: 0.9rem;
+  }
+  
+  .input, .textarea {
+    font-size: 0.95rem;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.9rem;
+  }
+  
+  .confirmationIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+  
+  .confirmation p {
+    font-size: 1.4rem;
+  }
+}

@@ -15,7 +15,10 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-
+.canvas{
+height: 100vh !important;
+background: black;
+}
 body {
   color: var(--foreground);
   background: var(--background);

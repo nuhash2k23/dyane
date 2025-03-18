@@ -1,0 +1,366 @@
+/* AboutPage.module.css */
+.pageWrapper {
+  --gold: #d4af37;
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --bg-dark: #0f0f0f;
+  --bg-light: #f8f8f8;
+  --overlay: rgba(15, 15, 15, 0.85);
+  --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(45deg, rgba(25, 25, 25, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  font-family: 'CasusPro';
+  overflow-x: hidden;
+  position: relative;
+}
+@font-face {
+  font-family: 'CasusPro';
+  src: url('/fonts/CasusPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MrsEaves';
+  src: url('/fonts/Mrs-Eaves-OT-Roman_31443.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Add the black-gold gradient effects */
+.pageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.15), transparent 70%),
+    radial-gradient(ellipse at bottom left, rgba(212, 175, 55, 0.1), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pageWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  will-change: transform, opacity;
+}
+
+.initialHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Enhance animation for elements */
+.sectionTitle, .paragraph, .signature, .highlight {
+  will-change: transform, opacity;
+}
+
+/* Add a subtle transition effect on images */
+.sectionImage {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+              filter 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sectionImage:hover {
+  filter: brightness(1.1);
+}
+
+/* Add a subtle glow effect to the highlight when animated */
+.highlight {
+  position: relative;
+  transition: color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Make sure content boxes have a proper stacking context for animations */
+.contentBox {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
+
+/* Make scrolling smoother on mobile */
+@media (max-width: 768px) {
+  .quickNav {
+    bottom: 1rem;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .navButton {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 30vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title section */
+.titleContainer {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-weight: 300;
+  text-align: center;
+  font-family: 'MrsEaves';
+  letter-spacing: 0.02em;
+  margin-bottom: -.4rem;
+  text-transform: uppercase;
+}
+
+/* Section design */
+.section {
+  padding: 6vh 4vw;
+  margin: 4vh 0;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.sectionInner {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+}
+
+/* Image styling */
+.imageContainer {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sectionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+  transition: transform 0.7s ease;
+  will-change: transform;
+}
+
+.imageContainer.left {
+  left: 0;
+}
+
+.imageContainer.right {
+  right: 0;
+}
+
+/* Content box that overlays the image */
+.contentContainer {
+  width: 55%;
+  position: relative;
+  z-index: 2;
+}
+
+.contentContainer.left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.contentContainer.right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.contentBox {
+  backdrop-filter: blur(5px);
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(15, 15, 15, 0.6); /* Adding a semi-transparent background */
+}
+
+/* Typography */
+.sectionTitle {
+  font-family: 'CasusPro';
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+  color: var(--gold);
+}
+
+.paragraph {
+  line-height: 1.7;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+}
+
+.signature {
+  font-family: 'MrsEaves';
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 2rem;
+}
+
+/* Highlight effect */
+.highlight {
+  position: relative;
+  color: var(--text-light);
+  display: inline-block;
+  background-image: linear-gradient(to right, var(--gold) 0%, var(--gold) 100%);
+  background-position: 0 88%;
+  background-repeat: no-repeat;
+  background-size: 100% 8%;
+  transition: background-size 0.6s ease;
+  padding: 0 0.21em;
+}
+
+.highlight:hover {
+ filter: drop-shadow(0px 0px .92px var(--gold));
+ cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  padding: 4rem 2rem;
+  background-color: rgba(15, 15, 15, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .sectionInner {
+    min-height: 500px;
+  }
+  
+  .contentBox {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .imageContainer {
+    width: 55%;
+  }
+  
+  .contentContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4vh 3vw;
+    min-height: auto;
+  }
+  
+  .sectionInner {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 1rem;
+  }
+  
+  .imageContainer.left,
+  .imageContainer.right {
+    left: auto;
+    right: auto;
+  }
+  
+  .contentContainer {
+    width: 100%;
+    margin: -4rem auto 0;
+  }
+  
+  .contentContainer.left,
+  .contentContainer.right {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .contentContainer.right .sectionTitle::after {
+    left: 0;
+    right: auto;
+  }
+  
+  .contentBox {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .titleContainer {
+    height: 30vh;
+  }
+  
+  .contentBox {
+    padding: 1.5rem;
+  }
+  
+  .signature {
+    margin-top: 1.5rem;
+  }
+  
+  .imageContainer {
+    height: 40vh;
+  }
+}
