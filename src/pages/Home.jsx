@@ -38,25 +38,25 @@ const Home = () => {
     fr: {
       sections: [
         {
-          title: "Élégance Divine",
-          text: "Découvrez l'essence intemporelle de <span class='highlight'>Dyane</span>, où chaque bouteille incarne la perfection artisanale et l'élégance.",
+          title: "Dyane",
+          text: "Dyane a pour objectif de révolutionner l'univers du cocktail avec des créations ready-to-drink artistiques en bouteille, alliant luxe, goût et design. Inspirée par la mythologie grecque, Dyane propose de véritables statues en céramique. Pour les boire, on retire la tête et on verse !",
         },
         {
-          title: "Artisanat Raffiné",
-          text: "Chaque création est méticuleusement élaborée, fusionnant <span class='highlight'>savoir-faire traditionnel</span> et <span class='highlight'>innovation moderne</span> pour une expérience sensorielle unique.",
+          title: "Exclusivité",
+          text: "Chaque bouteille Dyane est une pièce unique, façonnée à la main par une équipe de céramistes passionnés. Le design, protégé, en fait un véritable objet d'art que les invités souhaiteront rapporter chez eux."
         },
         {
-          title: "Saveurs Exquises",
-          text: "Des cocktails d'exception sublimés par des ingrédients de première qualité, révélant des notes complexes et des arômes envoûtants.",
+          title: "Délicieusement innovant",
+          text: "Chaque recette naît d'une incubation de trois mois, revisitant les classiques Pornstar Martini et Moscow Mule avec des ingrédients premium et des liqueurs uniques. Le design du packaging, conçu en plus de dix mois de travail avec les graphistes les plus talentueux, transforme chaque bouteille en œuvre d'art unique. Nos bouteilles imposent par leur élégance et leur format : de 75 cl à 12 L, avec robinet intégré pour les grandes contenances. En collaborant avec un cabinet et en réalisant chaque pièce à la main, nous bénéficions d'une flexibilité qui nous permet de proposer des statues aux contenances variées, afin de répondre aux attentes de vos clients les plus ambitieux."
         },
         {
-          title: "Design Iconique",
-          text: "Des bouteilles qui transcendent leur fonction pour devenir de véritables <span class='highlight'>œuvres d'art</span>, célébrant la fusion parfaite entre contenant et contenu.",
+          title: "Pour tous les goûts",
+          text: "Dyane s'engage à n'oublier aucun amateur de cocktails. Nous vous proposons une gamme exclusive de produits avec alcool, soigneusement élaborés avec un degré d'alcool compris entre 27 % et 30 % vol. Pour répondre à toutes les préférences, nous offrons également une sélection raffinée de produits sans alcool, conçus pour ceux qui recherchent une expérience tout aussi délicieuse et sophistiquée. Nous proposons les recettes revisitées du Pornstar Martini et du Moscow Mule pour le lancement. Découvrez un goût inégalé pour une expérience de plaisir absolu !"
         },
         {
-          title: "Héritage & Avenir",
-          text: "Une marque ancrée dans la tradition mais résolument tournée vers l'innovation, redéfinissant l'excellence pour les connaisseurs d'aujourd'hui et de demain.",
-          signature: "Plus qu'un cocktail, une émotion."
+          title: "Distribution haut de gamme",
+          text: "Actuellement, il n'existe pas d'offre premium artistique de cocktails prêts à boire en France. Notre ambition est de rendre ce format désirable en nous concentrant exclusivement sur une distribution B2B auprès de lieux soigneusement sélectionnés : des établissements d'exception, au positionnement haut de gamme et alignés avec notre vision. Clubs, restaurants festifs, restaurants gastronomiques, bars, casinos et hôtels palaces, vous pourrez retrouver Dyane dans vos établissements préférés. Nous collaborons uniquement avec des partenaires partageant nos valeurs et notre exigence, et nous voyons refuser toute distribution en dehors de ce cadre.",
+          signature: "Plus qu'un cocktail, une émotion. Plus qu'un produit, une signature."
         }
       ],
       footer: {
@@ -71,25 +71,25 @@ const Home = () => {
     en: {
       sections: [
         {
-          title: "Divine Elegance",
-          text: "Discover the timeless essence of <span class='highlight'>Dyane</span>, where each bottle embodies craftsmanship perfection and elegance.",
+          title: "Dyane",
+          text: "Dyane aims to revolutionize the cocktail universe with artistic ready-to-drink bottle creations, combining luxury, taste, and design. Inspired by Greek mythology, Dyane offers genuine ceramic statues. To drink them, simply remove the head and pour!",
         },
         {
-          title: "Refined Artistry",
-          text: "Each creation is meticulously crafted, blending <span class='highlight'>traditional expertise</span> with <span class='highlight'>modern innovation</span> for a unique sensory experience.",
+          title: "Exclusivity",
+          text: "Each Dyane bottle is a unique piece, handcrafted by a team of passionate ceramists. The protected design makes it a true art object that guests will want to take home with them."
         },
         {
-          title: "Exquisite Flavors",
-          text: "Exceptional cocktails enhanced by premium ingredients, revealing complex notes and captivating aromas.",
+          title: "Deliciously Innovative",
+          text: "Each recipe is born from a three-month incubation, revisiting classics like Pornstar Martini and Moscow Mule with premium ingredients and unique liqueurs. The packaging design, developed through more than ten months of work with the most talented designers, transforms each bottle into a unique work of art. Our bottles impress with their elegance and format: from 75cl to 12L, with an integrated tap for larger sizes. By collaborating with a design studio and creating each piece by hand, we benefit from flexibility that allows us to offer statues in various capacities to meet the expectations of your most ambitious clients."
         },
         {
-          title: "Iconic Design",
-          text: "Bottles that transcend their function to become true <span class='highlight'>works of art</span>, celebrating the perfect fusion of container and content.",
+          title: "For All Tastes",
+          text: "Dyane is committed to not forgetting any cocktail enthusiast. We offer an exclusive range of products with alcohol, carefully crafted with an alcohol content between 27% and 30% vol. To cater to all preferences, we also offer a refined selection of non-alcoholic products, designed for those seeking an equally delicious and sophisticated experience. We offer revisited recipes of Pornstar Martini and Moscow Mule for the launch. Discover an unmatched taste for an experience of absolute pleasure!"
         },
         {
-          title: "Heritage & Future",
-          text: "A brand rooted in tradition yet resolutely turned toward innovation, redefining excellence for today's and tomorrow's connoisseurs.",
-          signature: "More than a cocktail, an emotion."
+          title: "High-end Distribution",
+          text: "Currently, there is no premium artistic ready-to-drink cocktail offering in France. Our ambition is to make this format desirable by focusing exclusively on B2B distribution to carefully selected venues: exceptional establishments with high-end positioning aligned with our vision. Clubs, festive restaurants, gourmet restaurants, bars, casinos, and palace hotels - you can find Dyane in your favorite establishments. We collaborate only with partners who share our values and standards, and we refuse any distribution outside this framework.",
+          signature: "More than a cocktail, an emotion. More than a product, a signature."
         }
       ],
       footer: {
@@ -108,8 +108,6 @@ const Home = () => {
   return (
     <>
     <div className={styles.container}>
-      {/* Header outside the canvas for proper control */}
-      {/* <Header className={styles.headerFixed} /> */}
       <div className={styles.canvasContainer}>
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 4], fov: 40 }}>
           <Suspense fallback={null}>
@@ -121,8 +119,6 @@ const Home = () => {
               <Scroll html>
               <Header/>
                 <div className={styles.contentContainer}>
-
-
                   {/* Map through the sections */}
                   {currentContent.sections.map((section, index) => (
                     <section key={index} className={styles.section}>
@@ -149,23 +145,71 @@ const Home = () => {
                         {currentContent.footer.copyright}
                       </div>
                     </div>
-
                   </footer>
-                        {/* <Footer/> */}
                 </div>
               </Scroll>
             </ScrollControls>
             <Environment files="./studio_small_09_1k.hdr" environmentIntensity={.53}/>
           </Suspense>
-    
         </Canvas>
         <Loader />
       </div>
-
-
     </div>
-        
-          </>
+
+    {/* Inline styles for fonts */}
+    <style jsx global>{`
+      /* FONT-FACE DECLARATIONS */
+      @font-face {
+        font-family: "CasusPro";
+        src: url("/Fonts/CasusPro.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "MrsEavesOT";
+        src: url("/Fonts/Mrs-Eaves-OT-Roman_31443.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* Typography for homepage elements */
+      .${styles.sectionTitle} {
+        font-family: "MrsEavesOT", serif !important;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+      }
+      
+      .${styles.textContent} p {
+        font-family: "CasusPro", sans-serif !important;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+      }
+      
+      .${styles.highlight} {
+        font-family: "CasusPro", sans-serif !important;
+      }
+      
+      .${styles.signature} {
+        font-family: "CasusPro", sans-serif !important;
+        font-style: italic;
+        letter-spacing: 0.03em;
+      }
+      
+      .${styles.footerLinks} a {
+        font-family: "CasusPro", sans-serif !important;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+      }
+      
+      .${styles.footerCopyright} {
+        font-family: "MrsEavesOT", serif !important;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+    `}</style>
+    </>
   );
 };
 

@@ -445,6 +445,10 @@ const AboutPage = () => {
 
       {/* Global styles for content elements */}
       <style jsx global>{`
+
+      .${styles.sectionTitle}{
+      font-family: "MrsEavesOT", sans-serif;
+      }
         .${styles.pageWrapper} {
           font-family: "CasusPro", sans-serif;
         }
