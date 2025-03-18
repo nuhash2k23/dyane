@@ -1,7 +1,7 @@
 // components/Header.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Next.js Image component
+import Image from 'next/image';
 import styles from '../styles/Header.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
 
@@ -69,7 +69,6 @@ const Header = () => {
       <div className={styles.logoContainer}>
         <div className={styles.logo}>
           <Link href="/Home">
-            {/* Replace '/logo.png' with the path to your logo image */}
             <Image 
               src="/LogoDYANE_blanc.png" 
               alt="Logo" 
@@ -168,6 +167,51 @@ const Header = () => {
           </div>
         </nav>
       )}
+
+      {/* Inline styles for fonts */}
+      <style jsx>{`
+        /* FONT-FACE DECLARATIONS */
+        @font-face {
+          font-family: "CasusPro";
+          src: url("/Fonts/CasusPro.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: "MrsEavesOT";
+          src: url("/Fonts/Mrs-Eaves-OT-Roman_31443.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+      `}</style>
+
+      {/* Global styles for header elements */}
+      <style jsx global>{`
+        .${styles.header} {
+          font-family: "CasusPro", sans-serif;
+        }
+        
+        .${styles.navLink} {
+          font-family: "CasusPro", sans-serif;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05rem;
+        }
+        
+        .${styles.languageButton}, 
+        .${styles.languageOption},
+        .${styles.mobileLangOption} {
+          font-family: "CasusPro", sans-serif;
+          letter-spacing: 0.05rem;
+        }
+        
+        .${styles.mobileNav} a {
+          font-family: "CasusPro", sans-serif;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05rem;
+        }
+      `}</style>
     </header>
   );
 };
