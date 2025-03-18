@@ -425,6 +425,58 @@ const AboutPage = () => {
       </div>
       
       <Footer/>
+
+      {/* Inline styles for fonts */}
+      <style jsx>{`
+        /* FONT-FACE DECLARATIONS */
+        @font-face {
+          font-family: "CasusPro";
+          src: url("/Fonts/CasusPro.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: "MrsEavesOT";
+          src: url("/Fonts/Mrs-Eaves-OT-Roman_31443.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+      `}</style>
+
+      {/* Global styles for content elements */}
+      <style jsx global>{`
+        .${styles.pageWrapper} {
+          font-family: "CasusPro", sans-serif;
+        }
+        
+        .${styles.title} {
+          font-family: "MrsEavesOT", serif;
+          font-weight: 400;
+          letter-spacing: 0.05em;
+        }
+        
+        .${styles.sectionTitle} {
+          font-family: "MrsEavesOT", serif;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+        }
+        
+        .${styles.paragraph} {
+          font-family: "CasusPro", sans-serif;
+          font-weight: 300;
+          letter-spacing: 0.02em;
+        }
+        
+        .${styles.highlight} {
+          font-family: "CasusPro", sans-serif;
+        }
+        
+        .${styles.signature} {
+          font-family: "CasusPro", sans-serif;
+          font-style: italic;
+          letter-spacing: 0.03em;
+        }
+      `}</style>
     </div>
   );
 };

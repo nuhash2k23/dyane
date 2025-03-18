@@ -190,6 +190,75 @@ const ContactForm = () => {
         </div>
       </div>
       <Footer/>
+
+      {/* Inline styles for fonts */}
+      <style jsx>{`
+        /* FONT-FACE DECLARATIONS */
+        @font-face {
+          font-family: "CasusPro";
+          src: url("/Fonts/CasusPro.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: "MrsEavesOT";
+          src: url("/Fonts/Mrs-Eaves-OT-Roman_31443.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+      `}</style>
+
+      {/* Global styles for form elements */}
+      <style jsx global>{`
+        .${styles.pageContainer} {
+          font-family: "CasusPro", sans-serif;
+        }
+        
+        .${styles.title} {
+          font-family: "MrsEavesOT", serif;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+        }
+        
+        .${styles.intro} {
+          font-family: "CasusPro", sans-serif;
+          font-weight: 300;
+          letter-spacing: 0.02em;
+        }
+        
+        .${styles.field} label {
+          font-family: "CasusPro", sans-serif;
+          font-weight: 300;
+          letter-spacing: 0.02em;
+        }
+        
+        .${styles.input}, .${styles.textarea} {
+          font-family: "CasusPro", sans-serif;
+          font-weight: 300;
+        }
+        
+        .${styles.consentLabel} {
+          font-family: "CasusPro", sans-serif;
+          font-weight: 300;
+          font-size: 0.85rem;
+        }
+        
+        .${styles.submitButton} {
+          font-family: "MrsEavesOT", serif;
+          letter-spacing: 0.05em;
+        }
+        
+        .${styles.confirmation} p {
+          font-family: "MrsEavesOT", serif;
+          letter-spacing: 0.02em;
+        }
+        
+        .${styles.privacy} {
+          font-family: "CasusPro", sans-serif;
+          font-weight: 300;
+          font-size: 0.85rem;
+        }
+      `}</style>
     </>
   );
 };

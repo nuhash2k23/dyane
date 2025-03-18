@@ -10,7 +10,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
-
       </div>
       
       <nav className={styles.footerNav}>
@@ -22,6 +21,44 @@ const Footer = () => {
       <div className={styles.copyright}>
         © {new Date().getFullYear()} DYANE. {language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
       </div>
+
+      {/* Inline styles for fonts */}
+      <style jsx>{`
+        /* FONT-FACE DECLARATIONS */
+        @font-face {
+          font-family: "CasusPro";
+          src: url("/Fonts/CasusPro.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: "MrsEavesOT";
+          src: url("/Fonts/Mrs-Eaves-OT-Roman_31443.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+      `}</style>
+
+      {/* Global styles for footer elements */}
+      <style jsx global>{`
+        .${styles.footer} {
+          font-family: "CasusPro", sans-serif;
+        }
+        
+        .${styles.footerNav} a {
+          font-family: "CasusPro", sans-serif;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05rem;
+          transition: color 0.3s ease;
+        }
+        
+        .${styles.copyright} {
+          font-family: "MrsEavesOT", serif;
+          font-size: 0.85rem;
+          letter-spacing: 0.03rem;
+        }
+      `}</style>
     </footer>
   );
 };
