@@ -255,7 +255,7 @@
       
       .mobileNavIcon {
         display: flex;
-        transform:translateX(-50vw) !important;
+        transform:translateX(-20vw) !important;
 
       }
       
@@ -265,7 +265,7 @@
       
       .logoContainer {
         margin-bottom: 0;
-        transform:translateX(-70vw);
+        transform:translateX(-10vw);
       }
       
       .logo a {

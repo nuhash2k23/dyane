@@ -260,7 +260,7 @@ background-image: url('/public/LogoDYANE_blanc.png');
     margin-right: 0;
     text-align: right;
     margin-top: 0vh;
-  transform: translateX(-18vw);
+  transform: translateX(-15vw);
 
    
   }
@@ -278,7 +278,7 @@ background-image: url('/public/LogoDYANE_blanc.png');
     padding-left: 35vw;
     padding-right: 0;
     scale: .7;
-    transform: translateY(0vh);
+    transform: translateY(-10vh);
     /* background: rgba(17, 17, 17, 0.24); */
     /* backdrop-filter: blur(2.8px); */
     /* -webkit-backdrop-filter: blur(8px); */
