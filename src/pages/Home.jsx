@@ -66,7 +66,7 @@ const Home = () => {
           about: "À propos",
           contact: "Contact"
         },
-        copyright: "© 2023 Dyane. Tous droits réservés."
+        copyright: "© 2025 Dyane. Tous droits réservés."
       }
     },
     en: {
@@ -205,12 +205,7 @@ const Home = () => {
         font-family: "CasusPro", sans-serif !important;
       }
       
-      .${styles.signature} {
-        font-family: "CasusPro", sans-serif !important;
-        font-style: italic;
-        letter-spacing: 0.03em;
-      }
-      
+   
       .${styles.footerLinks} a {
         font-family: "CasusPro", sans-serif !important;
         font-weight: 300;

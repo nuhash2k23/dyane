@@ -12,12 +12,8 @@ const AgeDetect = () => {
         "Pour accéder au site Dyane, vous devez avoir l'âge légal de consommer et/ou d'acheter de l'alcool dans votre zone géographique. Si votre zone géographique ne prévoit pas d'âge légal, vous devez avoir 18 ans ou plus.",
       buttonText: "ACCÉDER AU SITE",
       legal: `
-        L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Veuillez ne pas partager ce site avec des mineurs.<br/>
-        Par le biais du groupe Moët Hennessy auquel elle appartient, la Maison Hennessy est membre de SpiritsEU, du forum européen sur la consommation responsable de l'alcool 
-        (<a href="https://www.responsibledrinking.eu" target="_blank">www.responsibledrinking.eu</a>), 
-        de DISCUS (<a href="https://www.discus.org" target="_blank">www.discus.org</a>) et de la CEEV 
-        (<a href="https://www.winemoderation.com" target="_blank">www.winemoderation.com</a>).<br/>
-        En accédant à ce site, vous déclarez accepter nos conditions générales d'utilisation et avoir pris connaissance de notre charte de données personnelles et cookies.
+       L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Veuillez ne pas partager ce site avec des mineurs.
+En accédant à ce site, vous déclarez accepter nos conditions générales d'utilisation et avoir pris connaissance de notre charte de données personnelles et cookies.
       `,
     },
     en: {
@@ -293,7 +289,7 @@ const AgeDetect = () => {
           border-radius: 4px;
         }
         button:hover {
-          background: #c47909;
+          background: #d4af37;
         }
         .legal-mentions {
           color: #ccc;

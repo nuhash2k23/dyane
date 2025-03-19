@@ -18,6 +18,15 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
+.Home_textContent__Mdq7N p {
+
+  
+  /* Remove the solid color */
+  /* color: #e4e4e4; */
+  
+  /* Add gradient text effect */
+
+}
 
 .visible {
   opacity: 1;
@@ -117,7 +126,13 @@
   line-height: 1.48;
   padding-right: 15vw;
   margin-bottom: 1.5rem;
-  color: #e4e4e4; /* Greyish-black text */
+  background: linear-gradient(45deg, #000000 10%, #ffffff 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* Make text more visible against dark backgrounds */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
 }
 
 .highlight {
@@ -286,10 +301,15 @@ background-image: url('/public/LogoDYANE_blanc.png');
     border-radius: 10px;
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   }
-  
+  .section:nth-child(3) .sectionTitle,
+.section:nth-child(4) .sectionTitle {
+  /* Specific styles for 1st and 2nd titles */
+transform: translateY(10vh); /* Example style - replace with your desired styles */
+  /* Other specific styles */
+}
   
   .footer{
-    transform: translateX(-10vh);
+    transform: translateX(-7vh);
 
   }
  
