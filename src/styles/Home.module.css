@@ -272,8 +272,9 @@ background-image: url('/public/LogoDYANE_blanc.png');
   .textContent p {
     width: 100%;
     font-size: 0.92rem;
+    transform:translateX(20vw);
     font-style: italic;
-    padding-left: 35vw;
+    /* padding-left: 35vw; */
     padding-right: 0;
     /* background: rgba(17, 17, 17, 0.24); */
     /* backdrop-filter: blur(2.8px); */
