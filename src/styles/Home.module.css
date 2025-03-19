@@ -18,15 +18,7 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
-.Home_textContent__Mdq7N p {
 
-  
-  /* Remove the solid color */
-  /* color: #e4e4e4; */
-  
-  /* Add gradient text effect */
-
-}
 
 .visible {
   opacity: 1;
@@ -302,9 +294,9 @@ background-image: url('/public/LogoDYANE_blanc.png');
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   }
   .section:nth-child(3) .sectionTitle,
-.section:nth-child(4) .sectionTitle {
+.section:nth-child(4) .sectionTitle, .section:nth-child(5) .sectionTitle {
   /* Specific styles for 1st and 2nd titles */
-transform: translateY(10vh); /* Example style - replace with your desired styles */
+transform: translateY(4vh); /* Example style - replace with your desired styles */
   /* Other specific styles */
 }
   
