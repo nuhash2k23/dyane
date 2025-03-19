@@ -111,8 +111,7 @@
 
 }
 
-
-.textContent p {
+/* .textContent p {
   font-family: 'CasusPro', serif;
   font-size: 0.83rem;
   line-height: 1.48;
@@ -122,6 +121,17 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  
+  
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
+} */
+.textContent p {
+  font-family: 'CasusPro', serif;
+  font-size: 0.83rem;
+  line-height: 1.48;
+  padding-right: 15vw;
+  margin-bottom: 1.5rem;
+ color: white;
   
   /* Make text more visible against dark backgrounds */
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.13);

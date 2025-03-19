@@ -8,6 +8,7 @@ import styles from '../styles/Home.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
 import Footer from '@/Component/Footer';
 import Image from 'next/image';
+import { Model2 } from '@/Component/Model2';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -115,8 +116,8 @@ const Home = () => {
             <ScrollControls pages={5.75} damping={0.25}>
 
               {/* 3D Model */}
-              <Model />
-      
+              {/* <Model /> */}
+      <Model2/>
               {/* HTML Content */}
               <Scroll html>
             <Headerhome/>
