@@ -295,7 +295,7 @@ const AboutPage = () => {
         {
           id: 'product',
           imagePosition: 'right',
-          image: '/image.png',
+          image: '/three.jpg',
           alt: 'Image de création Dyane 3',
           content: (
             <>
@@ -358,7 +358,7 @@ const AboutPage = () => {
         {
           id: 'product',
           imagePosition: 'right',
-          image: '/image.png',
+          image: '/three.jpg',
           alt: 'Dyane creation image 3',
           content: (
             <>

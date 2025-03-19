@@ -81,38 +81,39 @@
 .textContent {
   width: 55%;
   padding: .3rem;
-  margin-right: 5%;
+  /* margin-right: 5%; */
   
   border-radius: 1rem;
 
 
-  transform: translateY(0);
+  transform: translateY(10vh);
   transition: transform 0.5s ease;
   pointer-events: auto; /* Restore pointer events */
 }
 
-.section:hover .textContent {
+/* .section:hover .textContent {
   transform: translateY(-10px);
-}
+} */
 
 .sectionTitle {
   font-family: 'MrsEaves', sans-serif;
-  font-size: 5rem;
+  font-size: 3.75rem;
   font-weight: 200;
-  margin-bottom: .35rem;
+
   background: linear-gradient(45deg, #d4af37, #645216); /* Gradient from gold to black */
   -webkit-background-clip: text; /* Ensures the background is applied only to the text */
   color: transparent; /* Makes the text itself transparent so the background is visible */
   position: relative;
   line-height: 1;
-  height: 100px;
+  height: 200px;
+
 
 }
 
 
 .textContent p {
   font-family: 'CasusPro', serif;
-  font-size: 1.183rem;
+  font-size: 0.83rem;
   line-height: 1.48;
   padding-right: 15vw;
   margin-bottom: 1.5rem;
@@ -258,24 +259,26 @@ background-image: url('/public/LogoDYANE_blanc.png');
     width: 100%;
     margin-right: 0;
     text-align: right;
-    margin-top: 30vh;
+    margin-top: 0vh;
+  transform: translateX(-18vw);
 
    
   }
   
   .sectionTitle {
     font-size:4.1rem;
-    height: 30vh;
-    margin-bottom: 1.2rem;
+ height: auto !important;
+    margin-bottom: 0rem;
+    scale: .68;
   }
-  
+
   .textContent p {
     width: 100%;
     font-size: 0.92rem;
-    transform:translateX(20vw);
-    font-style: italic;
-    /* padding-left: 35vw; */
+    padding-left: 35vw;
     padding-right: 0;
+    scale: .7;
+    transform: translateY(0vh);
     /* background: rgba(17, 17, 17, 0.24); */
     /* backdrop-filter: blur(2.8px); */
     /* -webkit-backdrop-filter: blur(8px); */
@@ -285,12 +288,21 @@ background-image: url('/public/LogoDYANE_blanc.png');
   }
   
   
-  .signature {
-    font-size: 1.2rem;
+  .footer{
+    transform: translateX(-10vh);
+
   }
-  
+ 
   .footerLinks {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
+ 
+    
+    transform: translateY(78vh);
+    text-align: right;
+  }.footerCopyright{
+    transform: translateY(74vh);
+    font-size: .73rem;
+
   }
 }

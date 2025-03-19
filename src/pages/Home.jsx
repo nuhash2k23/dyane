@@ -2,11 +2,12 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, Loader, ScrollControls, Scroll } from '@react-three/drei';
-import Header from '../Component/Header';
+import Headerhome from '../Component/Headerhome';
 import { Model } from '../Component/Model';
 import styles from '../styles/Home.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
 import Footer from '@/Component/Footer';
+import Image from 'next/image';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -112,30 +113,39 @@ const Home = () => {
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 4], fov: 40 }}>
           <Suspense fallback={null}>
             <ScrollControls pages={5.75} damping={0.25}>
+
               {/* 3D Model */}
               <Model />
-              
+      
               {/* HTML Content */}
               <Scroll html>
-              <Header/>
+            <Headerhome/>
+           
                 <div className={styles.contentContainer}>
                   {/* Map through the sections */}
                   {currentContent.sections.map((section, index) => (
-                    <section key={index} className={styles.section}>
+                    <section 
+                      key={index} 
+                      className={`
+                        ${styles.section} 
+                        ${index >= 2 ? styles.laterSection : ''}
+                      `}
+                    >
                       <div className={styles.textContent}>
                         <h2 className={styles.sectionTitle}>{section.title}</h2>
-                        <p>{renderWithHighlights(section.text)}</p>
-                        {section.signature && (
+                        <p className={index >= 2 ? styles.movedUpText : ''}>{renderWithHighlights(section.text)}</p>
+                        {/* {section.signature && (
                           <p className={styles.signature}>{section.signature}</p>
-                        )}
+                        )} */}
                       </div>
                     </section>
                   ))}
-                  
+          
                   {/* Footer */}
                   <footer className={styles.footer}>
+                  
                     <div className={styles.footerContent}>
-                      <div className={styles.footerLogo}></div>
+                   
                       <div className={styles.footerLinks}>
                         <a href="/Home">{currentContent.footer.links.home}</a>
                         <a href="/About">{currentContent.footer.links.about}</a>
@@ -147,6 +157,7 @@ const Home = () => {
                     </div>
                   </footer>
                 </div>
+               
               </Scroll>
             </ScrollControls>
             <Environment files="./studio_small_09_1k.hdr" environmentIntensity={.53}/>
@@ -154,6 +165,7 @@ const Home = () => {
         </Canvas>
         <Loader />
       </div>
+  
     </div>
 
     {/* Inline styles for fonts */}
@@ -178,13 +190,15 @@ const Home = () => {
       .${styles.sectionTitle} {
         font-family: "MrsEavesOT", serif !important;
         font-weight: 400;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.01em;
+        height: auto;
+        padding-bottom: 1rem;
       }
       
       .${styles.textContent} p {
         font-family: "CasusPro", sans-serif !important;
         font-weight: 300;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.01em;
       }
       
       .${styles.highlight} {
@@ -207,6 +221,53 @@ const Home = () => {
         font-family: "MrsEavesOT", serif !important;
         font-weight: 400;
         letter-spacing: 0.02em;
+      }
+
+      /* Special responsive styles for sections 3, 4, and 5 */
+      @media (max-width: 768px) {
+        .${styles.laterSection} .${styles.textContent} {
+          margin-top: -15vh !important; /* Move up on tablets */
+        }
+
+        .${styles.movedUpText} {
+          padding-top: 0 !important;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .${styles.laterSection} .${styles.textContent} {
+          margin-top: -25vh !important; /* Move up even more on mobile */
+        }
+        
+        .${styles.laterSection} .${styles.sectionTitle} {
+          height: auto !important;
+          min-height: 10vh;
+          padding-bottom: 1rem !important;
+        }
+        
+        .${styles.movedUpText} {
+          margin-top: -5vh !important;
+        }
+      }
+
+      /* Additional height adjustments for individual sections if needed */
+      @media (max-width: 576px) {
+        .${styles.section}:nth-child(1) .${styles.textContent} {
+          margin-top: 15vh !important; /* Custom positioning for section 3 */
+        }
+         .${styles.section}:nth-child(2) .${styles.textContent} {
+          margin-top: -55vh !important; /* Custom positioning for section 3 */
+        }
+           .${styles.section}:nth-child(3) .${styles.textContent} {
+          margin-top: -15vh !important; /* Custom positioning for section 3 */
+        }
+        .${styles.section}:nth-child(4) .${styles.textContent} {
+          margin-top: 58vh !important; /* Custom positioning for section 4 */
+        }
+        
+        .${styles.section}:nth-child(5) .${styles.textContent} {
+          margin-top: 150vh !important; /* Custom positioning for section 5 */
+        }
       }
     `}</style>
     </>

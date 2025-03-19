@@ -2,18 +2,17 @@
 .footer {
     background-color: #000;
     color: white;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
   
-  .logo {
- background-image: url('/public/LogoDYANE_blanc.png');
- width: 120px;
- height: 120px;
-  }
+.footerLogoImage{
+  transform: translateY(-5vh);
+}
   
   .footerNav {
     display: flex;
@@ -25,7 +24,7 @@
   .footerNav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.62rem !important;
     transition: color 0.3s ease;
   }
   
@@ -34,6 +33,6 @@
   }
   
   .copyright {
-    font-size: 0.9rem;
+    font-size: 0.69rem;
     color: #888;
   }

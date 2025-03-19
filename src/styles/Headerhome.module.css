@@ -1,0 +1,320 @@
+/* components/Header.module.css */
+@font-face {
+    font-family: 'CasusPro';
+    src: url('/fonts/CasusPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    scale: .8;
+    background-color: #00000000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .header.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  
+  .logoContainer {
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  
+  .logo a:hover {
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  }
+  
+  .navContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .desktopNav {
+    display: flex;
+    /* border:1px solid rgb(206, 154, 25); */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navLink {
+    margin: 0 4rem;
+    font-family: 'CasusPro', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;transform: translateY(0vh);
+  
+    transition: color 0.3s;
+  }
+  
+  .navLink:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #d4af37; /* Gold color */
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #d4af37; /* Gold color */
+  }
+  
+  .navLink:hover:after {
+    width: 100%;
+  }
+  
+  /* Language selector styling */
+  .languageSelector {
+    position: relative;
+    margin-left: 2rem;
+  }
+  
+  .languageButton {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    border-radius: 93pc;
+    color: #d4af37;
+    font-family: 'CasusPro', sans-serif;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .languageButton:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+  }
+  
+  .dropdownArrow {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  
+  .languageDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    border: 1px solid #d4af37;
+    border-top: none;
+    width: 150px;
+    z-index: 10;
+  }
+  
+  .languageOption {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'CasusPro', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .languageOption:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+  }
+  
+  .languageOption.active {
+    color: #d4af37;
+  }
+  
+  /* Mobile navigation */
+  .mobileNavIcon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    scale: 1.4;
+    top: 4rem;
+    right: -.82rem;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 2px;
+    background-color: #d4af37;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .bar.active:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .bar.active:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .bar.active:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .mobileNav {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-top: 30vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .mobileNav a {
+    padding: 1.5rem;
+    font-family: 'CasusPro', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+  }
+  
+  .mobileNav a:hover {
+    color: #d4af37;
+  }
+  
+  .mobileLangToggle {
+    display: flex;
+    margin-top: 2rem;
+  }
+  
+  .mobileLangOption {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    font-family: 'CasusPro', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .mobileLangOption:hover, .mobileLangOption.active {
+    background-color: #d4af37;
+    color: #000;
+  }
+  
+  /* Spacer to account for fixed header */
+  .headerSpacer {
+    height: 140px; /* Adjust based on your header height */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .logo a {
+      font-size: 2.5rem;
+    }
+    
+    .navLink {
+      margin: 0 1.5rem;
+    }
+  }
+  @media (max-width: 568px){
+    .desktopNav {
+        display: none;
+      }
+      
+      .mobileNavIcon {
+        display: flex;
+        transform:translateX(-50vw) !important;
+
+      }
+      
+      .header.visible {
+        padding: 1.2rem 0;
+      }
+      
+      .logoContainer {
+        margin-bottom: 0;
+        transform:translateX(-70vw);
+      }
+      
+      .logo a {
+        font-size: 2rem;
+      }
+      
+      .mobileNav {
+        display: flex;
+        position: absolute;
+        height: 80vh;
+  
+
+        z-index: 9999;
+      }
+      
+      .headerSpacer {
+        height: 80px; /* Adjust for mobile header height */
+      }
+  }
+  @media (max-width: 768px) {
+    .desktopNav {
+      display: none;
+    }
+    
+    .mobileNavIcon {
+      display: flex;
+    }
+    
+    .header.visible {
+      padding: 1.2rem 0;
+    }
+    
+    .logoContainer {
+      margin-bottom: 0;
+    }
+    
+    .logo a {
+      font-size: 2rem;
+    }
+    
+    .mobileNav {
+      display: flex;
+      position: absolute;
+      height: 80vh;
+      transform:translateX(-12vh);
+      z-index: 9999;
+    }
+    
+    .headerSpacer {
+      height: 80px; /* Adjust for mobile header height */
+    }
+  }

@@ -80,7 +80,10 @@
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
               filter 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
+.sectionTitle{
+  font-size: 4.3rem ;
+  font-style: normal !important;
+}
 .sectionImage:hover {
   filter: brightness(1.1);
 }
@@ -350,6 +353,7 @@
 @media (max-width: 576px) {
   .titleContainer {
     height: 30vh;
+    
   }
   
   .contentBox {
