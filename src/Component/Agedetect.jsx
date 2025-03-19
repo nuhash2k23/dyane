@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const AgeDetect = () => {
   const router = useRouter();
@@ -134,7 +135,13 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
   return (
     <div className="age-gate-container">
       {/* Logo */}
-      <img src="/Media/LogoDYANE_blanc.png" alt="Dyane Logo" className="logo" />
+      <Image 
+              src="/LogoDYANE_blanc.png" 
+              alt="Logo" 
+              width={100} 
+              height={80} 
+              
+            />
 
       <div className="para">
         <p dangerouslySetInnerHTML={{ __html: translations[lang].subheading }} />
@@ -204,10 +211,14 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
           margin-top: 2vh;
         }
         .para {
-          color: white;
+          color: grey;
+          opacity:0.7;
           padding-right: 30vw;
           padding-left: 30vw;
+          scale:0.86;
+       
         }
+        
         .logo {
           display: block;
           margin: 0 auto 1.5rem auto;
@@ -280,7 +291,7 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
           background: #444;
           color: #fff;
           width: 20vw;
-          height: 8vh;
+          height: 10vh;
           font-family: CasusPro;
           border: none;
           padding: 1rem;
@@ -289,7 +300,7 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
           border-radius: 4px;
         }
         button:hover {
-          background: #d4af37;
+          background:rgb(135, 104, 23);
         }
         .legal-mentions {
           color: #ccc;
