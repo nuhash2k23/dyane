@@ -254,19 +254,30 @@ const Home = () => {
       @media (max-width: 576px) {
         .${styles.section}:nth-child(1) .${styles.textContent} {
           margin-top: 15vh !important; /* Custom positioning for section 3 */
+          scale:1.2;
         }
+     
          .${styles.section}:nth-child(2) .${styles.textContent} {
           margin-top: -55vh !important; /* Custom positioning for section 3 */
+          scale:1.2;
+          
+
         }
            .${styles.section}:nth-child(3) .${styles.textContent} {
           margin-top: -15vh !important; /* Custom positioning for section 3 */
+          scale:1.2;
+
         }
         .${styles.section}:nth-child(4) .${styles.textContent} {
           margin-top: 58vh !important; /* Custom positioning for section 4 */
+          scale:1.2;
+
         }
         
         .${styles.section}:nth-child(5) .${styles.textContent} {
           margin-top: 150vh !important; /* Custom positioning for section 5 */
+          scale:1.2;
+
         }
       }
     `}</style>
