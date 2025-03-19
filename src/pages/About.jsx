@@ -252,7 +252,7 @@ const AboutPage = () => {
         {
           id: 'vision',
           imagePosition: 'right',
-          image: '/Image.png',
+          image: '/image.png',
           alt: 'Image de création Dyane',
           content: (
             <>
@@ -274,7 +274,7 @@ const AboutPage = () => {
         {
           id: 'process',
           imagePosition: 'left',
-          image: '/Image2.png',
+          image: '/image2.png',
           alt: 'Image de création Dyane 2',
           content: (
             <>
@@ -295,7 +295,7 @@ const AboutPage = () => {
         {
           id: 'product',
           imagePosition: 'right',
-          image: '/Image.png',
+          image: '/image.png',
           alt: 'Image de création Dyane 3',
           content: (
             <>
@@ -318,7 +318,7 @@ const AboutPage = () => {
         {
           id: 'vision',
           imagePosition: 'right',
-          image: '/Image.png',
+          image: '/image.png',
           alt: 'Dyane creation image',
           content: (
             <>
@@ -338,7 +338,7 @@ const AboutPage = () => {
         {
           id: 'process',
           imagePosition: 'left',
-          image: '/Image2.png',
+          image: '/image2.png',
           alt: 'Dyane creation image 2',
           content: (
             <>
@@ -358,7 +358,7 @@ const AboutPage = () => {
         {
           id: 'product',
           imagePosition: 'right',
-          image: '/Image.png',
+          image: '/image.png',
           alt: 'Dyane creation image 3',
           content: (
             <>
