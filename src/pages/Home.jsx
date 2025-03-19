@@ -161,7 +161,7 @@ const Home = () => {
                
               </Scroll>
             </ScrollControls>
-            <Environment files="./studio_small_09_1k.hdr" environmentIntensity={.53}/>
+            <Environment files="./studio_small_09_1k.hdr" environmentIntensity={.53} backgroundRotation={23}/>
           </Suspense>
         </Canvas>
         <Loader />

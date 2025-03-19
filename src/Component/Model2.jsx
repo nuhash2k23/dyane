@@ -288,8 +288,8 @@ export function Model2() {
         receiveShadow
         geometry={nodes.cap.geometry}
         material={materials['Material.005']}
-        // position={[0, -0.001, 0]}
-        // rotation={[0, -0.389, 0]}
+        position={[0, -0.001, 0]}
+        rotation={[0, -0.389, 0]}
       />
     </group>
   );
