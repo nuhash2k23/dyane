@@ -34,12 +34,15 @@ export function Model2() {
   const initialRotation = Math.PI / 6;
   // Set initial values with responsive adjustments.
   const initialPositionX = isSmallDevice ? -2.0 : -2.8;
+  // Initialize cap with 0.2 rotation on Y-axis
+  const initialCapRotationY = 0.2;
+  
   const prevValues = useRef({
     positionX: initialPositionX,
     positionY: -1.5,
     rotationY: initialRotation,
     capPositionY: 0,
-    capRotationY: 0,
+    capRotationY: initialCapRotationY, // Start with the initial cap rotation
     cameraX: -1.0,
     cameraY: 0,
     cameraZ: 2.8,
@@ -90,21 +93,24 @@ export function Model2() {
       targetRotationY = initialRotation + 2 * Math.PI * section5;
     }
 
-    // --- Cap Animation ---
+    // --- Cap Animation (now with initialCapRotationY as base) ---
     let targetCapPositionY = 0;
-    let targetCapRotationY = 0;
+    let targetCapRotationY = initialCapRotationY; // Start with initial cap rotation
+    
     if (scrollProgress >= 0.2 && scrollProgress < 0.4) {
       const easeInOut = t =>
         t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
       const eased = easeInOut(section2);
       targetCapPositionY = eased * 0.35;
-      targetCapRotationY = eased * (1.85 * Math.PI);
+      // Add rotation on top of the initial rotation
+      targetCapRotationY = initialCapRotationY + eased * (1.85 * Math.PI);
     } else if (scrollProgress >= 0.4 && scrollProgress < 0.6) {
       const easeInOut = t =>
         t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
       const eased = easeInOut(1 - section3);
       targetCapPositionY = eased * 0.35;
-      targetCapRotationY = eased * (1.85 * Math.PI);
+      // Add rotation on top of the initial rotation
+      targetCapRotationY = initialCapRotationY + eased * (1.85 * Math.PI);
     }
 
     // --- Scarf Color Transitions ---
@@ -261,35 +267,34 @@ export function Model2() {
       scale={1.32}
       rotation={[0, initialRotation, 0]}
     >
-        <group ref={bodyRef}>
-    <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.无标题1003.geometry}
-        material={materials['Material.005']}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.无标题1003_1.geometry}
-        material={materials['Material.001']}
-      />
+      <group ref={bodyRef}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.无标题1003.geometry}
+          material={materials['Material.005']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.无标题1003_1.geometry}
+          material={materials['Material.001']}
+        />
       </group>
       <mesh
-      ref={scarfRef}
+        ref={scarfRef}
         castShadow
         receiveShadow
         geometry={nodes.scarf.geometry}
         material={scarfMaterial}
       />
-       <mesh
-       ref={capRef}
+      <mesh
+        ref={capRef}
         castShadow
         receiveShadow
         geometry={nodes.cap.geometry}
         material={materials['Material.005']}
-        position={[0, -0.001, 0]}
-        rotation={[0, -0.389, 0]}
+        rotation={[0, initialCapRotationY, 0]} // Set initial rotation here
       />
     </group>
   );

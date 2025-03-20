@@ -120,7 +120,7 @@ const Home = () => {
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 4], fov: 40 }}>
           <Suspense fallback={null}>
             {/* Key on ScrollControls forces full re-creation when language changes */}
-            <ScrollControls key={scrollKey} pages={5.75} damping={0.25}>
+            <ScrollControls key={scrollKey} pages={5.75} damping={0.3}>
               <Model2/>
               
               <Scroll html>
