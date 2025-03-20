@@ -21,8 +21,8 @@
   
   position: relative;
   overflow: hidden;
-  background-image: url('/images/fbg.jpg');
-  background-size: 190vw 220vh;
+  background-image: url('/images/france-4899386_1920.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
 
   /* background-color: #111111; */

@@ -3,25 +3,27 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, Loader, ScrollControls, Scroll } from '@react-three/drei';
 import Headerhome from '../Component/Headerhome';
-import { Model } from '../Component/Model';
 import styles from '../styles/Home.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
-import Footer from '@/Component/Footer';
-import Image from 'next/image';
 import { Model2 } from '@/Component/Model2';
 
 const Home = () => {
+  // Get language directly from context
   const { language } = useLanguage();
+  // Force re-render when language changes with a local state
   const [currentLanguage, setCurrentLanguage] = useState(language);
-  
-  // Update content when language changes
+
+  // Update local state when language context changes
   useEffect(() => {
-    setCurrentLanguage(language);
-  }, [language]);
+    if (language !== currentLanguage) {
+      console.log('Language changed from', currentLanguage, 'to', language);
+      setCurrentLanguage(language);
+    }
+  }, [language, currentLanguage]);
   
   // Helper function to render text with highlights
   const renderWithHighlights = (text) => {
-    if (!text.includes('<span')) return text;
+    if (!text || !text.includes('<span')) return text;
     
     // Split by the highlight tags
     const parts = text.split(/<span class='highlight'>|<\/span>/);
@@ -105,7 +107,11 @@ const Home = () => {
     }
   };
   
+  // Select content based on current local language state
   const currentContent = content[currentLanguage];
+
+  // The key for the whole ScrollControls to force re-creation when language changes
+  const scrollKey = `scroll-controls-${currentLanguage}`;
 
   return (
     <>
@@ -113,20 +119,18 @@ const Home = () => {
       <div className={styles.canvasContainer}>
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 4], fov: 40 }}>
           <Suspense fallback={null}>
-            <ScrollControls pages={5.75} damping={0.25}>
-
-              {/* 3D Model */}
-              {/* <Model /> */}
-      <Model2/>
-              {/* HTML Content */}
+            {/* Key on ScrollControls forces full re-creation when language changes */}
+            <ScrollControls key={scrollKey} pages={5.75} damping={0.25}>
+              <Model2/>
+              
               <Scroll html>
-            <Headerhome/>
-           
+                <Headerhome/>
+                
                 <div className={styles.contentContainer}>
-                  {/* Map through the sections */}
+                  {/* Map through the sections with keys that include language */}
                   {currentContent.sections.map((section, index) => (
                     <section 
-                      key={index} 
+                      key={`section-${index}-${currentLanguage}`}
                       className={`
                         ${styles.section} 
                         ${index >= 2 ? styles.laterSection : ''}
@@ -134,19 +138,18 @@ const Home = () => {
                     >
                       <div className={styles.textContent}>
                         <h2 className={styles.sectionTitle}>{section.title}</h2>
-                        <p className={index >= 2 ? styles.movedUpText : ''}>{renderWithHighlights(section.text)}</p>
-                        {/* {section.signature && (
+                        <p className={index >= 2 ? styles.movedUpText : ''}>
+                          {renderWithHighlights(section.text)}
+                        </p>
+                        {section.signature && (
                           <p className={styles.signature}>{section.signature}</p>
-                        )} */}
+                        )}
                       </div>
                     </section>
                   ))}
           
-                  {/* Footer */}
                   <footer className={styles.footer}>
-                  
                     <div className={styles.footerContent}>
-                   
                       <div className={styles.footerLinks}>
                         <a href="/Home">{currentContent.footer.links.home}</a>
                         <a href="/About">{currentContent.footer.links.about}</a>
@@ -158,7 +161,6 @@ const Home = () => {
                     </div>
                   </footer>
                 </div>
-               
               </Scroll>
             </ScrollControls>
             <Environment files="./studio_small_09_1k.hdr" environmentIntensity={.53} backgroundRotation={23}/>
@@ -166,10 +168,9 @@ const Home = () => {
         </Canvas>
         <Loader />
       </div>
-  
     </div>
 
-    {/* Inline styles for fonts */}
+    {/* Styles remain unchanged */}
     <style jsx global>{`
       /* FONT-FACE DECLARATIONS */
       @font-face {
@@ -206,7 +207,11 @@ const Home = () => {
         font-family: "CasusPro", sans-serif !important;
       }
       
-   
+      .${styles.signature} {
+        font-family: "CasusPro", sans-serif !important;
+        font-style: italic;
+      }
+      
       .${styles.footerLinks} a {
         font-family: "CasusPro", sans-serif !important;
         font-weight: 300;
@@ -219,7 +224,7 @@ const Home = () => {
         letter-spacing: 0.02em;
       }
 
-      /* Special responsive styles for sections 3, 4, and 5 */
+      /* Special responsive styles for sections */
       @media (max-width: 768px) {
         .${styles.laterSection} .${styles.textContent} {
           margin-top: -15vh !important; /* Move up on tablets */
