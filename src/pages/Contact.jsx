@@ -26,6 +26,7 @@ const ContactForm = () => {
     consent: false
   });
   
+  
   // Initialize Lenis and header scroll behavior
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
@@ -122,34 +123,27 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic here (e.g., API call)
     
-    // Animate form submission
-    const form = e.target;
-    gsap.to(form, {
-      opacity: 0,
-      y: -20,
-      duration: 0.5,
-      onComplete: () => {
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      if (res.ok) {
+        // Handle successful submission
         setSubmitted(true);
-        // Reset form after submission
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-          consent: false
-        });
-        
-        // Animate confirmation message
-        gsap.fromTo(
-          `.${styles.confirmation}`,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
-        );
+        // Reset form fields, etc.
+      } else {
+        const errorData = await res.json();
+        console.error("Error:", errorData.error);
       }
-    });
+    } catch (error) {
+      console.error("Request failed:", error);
+    }
   };
   
   // Animation on component mount

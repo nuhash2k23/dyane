@@ -134,7 +134,7 @@
   align-items: flex-start;
   margin-bottom: 2rem;
   text-align: left;
-  opacity: 0; /* Initially hidden for animation */
+  opacity: 1; /* Initially hidden for animation */
 }
 
 .checkbox {
