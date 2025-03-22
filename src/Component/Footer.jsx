@@ -23,8 +23,10 @@ const Footer = () => {
         <Link href="/Home">{language === 'fr' ? 'Accueil' : 'Home'}</Link>
         <Link href="/About">{language === 'fr' ? 'À propos' : 'About'}</Link>
         <Link href="/Contact">{language === 'fr' ? 'Contact' : 'Contact'}</Link>
-      </nav>
       
+      </nav>
+      <Link className={styles.termslegal} href="/Terms">{language === 'fr' ? 'Politique de confidentialité et CGVU' : 'CGVU'}</Link>
+      <Link  className={styles.termslegal} href="/Legal">{language === 'fr' ? 'Mentions légales' : 'Legals'}</Link>
       <div className={styles.copyright}>
         © {new Date().getFullYear()} DYANE. {language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
       </div>

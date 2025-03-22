@@ -67,7 +67,9 @@ const Home = () => {
         links: {
           home: "Accueil",
           about: "À propos",
-          contact: "Contact"
+          contact: "Contact",
+          terms: "Politique de confidentialité et CGVU",
+          legal: "Mentions légales"
         },
         copyright: "© 2025 Dyane. Tous droits réservés."
       }
@@ -100,7 +102,9 @@ const Home = () => {
         links: {
           home: "Home",
           about: "About",
-          contact: "Contact"
+          contact: "Contact",
+            terms: "Privacy Policy",
+          legal: "Legal Notice"
         },
         copyright: "© 2025 Dyane. All rights reserved."
       }
@@ -155,6 +159,13 @@ const Home = () => {
                         <a href="/About">{currentContent.footer.links.about}</a>
                         <a href="/Contact">{currentContent.footer.links.contact}</a>
                       </div>
+                      <div className={styles.footerLinks}>
+                        <a href="/Terms">{currentContent.footer.links.terms}</a>
+                        <a href="/Legal">{currentContent.footer.links.legal}</a>
+                     
+                      </div>
+                      
+
                       <div className={styles.footerCopyright}>
                         {currentContent.footer.copyright}
                       </div>
@@ -163,7 +174,7 @@ const Home = () => {
                 </div>
               </Scroll>
             </ScrollControls>
-            <Environment files="./studio_small_09_1k.hdr" environmentIntensity={.53} backgroundRotation={23}/>
+            <Environment files="./studio_small_09_1k.hdr"  environmentIntensity={.53}  />
           </Suspense>
         </Canvas>
         <Loader />

@@ -13,6 +13,11 @@
 .footerLogoImage{
   transform: translateY(-5vh);
 }
+.termslegal{
+  scale:.7;
+  opacity: .6;
+  transform: translateY(-1.4vh);
+}
   
   .footerNav {
     display: flex;
