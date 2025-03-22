@@ -13,7 +13,7 @@ const AgeDetect = () => {
         "Pour accéder au site Dyane, vous devez avoir l'âge légal de consommer et/ou d'acheter de l'alcool dans votre zone géographique. Si votre zone géographique ne prévoit pas d'âge légal, vous devez avoir 18 ans ou plus.",
       buttonText: "ACCÉDER AU SITE",
       legal: `
-       L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Veuillez ne pas partager ce site avec des mineurs.
+       L’abus d’alcoo est dangereux pour la santé. À consommer avec modération. Veuillez ne pas partager ce site avec des mineurs.
 En accédant à ce site, vous déclarez accepter nos conditions générales d'utilisation et avoir pris connaissance de notre charte de données personnelles et cookies.
       `,
     },
@@ -233,7 +233,7 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
         p {
           font-size: 0.71rem;
           line-height: 1.15rem;
-          text-transform: uppercase;
+          // text-transform: uppercase;
           margin-bottom: 1.5rem;
         }
         .inputs-container {
@@ -304,13 +304,13 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
         }
         .legal-mentions {
           color: #ccc;
-          font-size: .83rem;
+ scale:.87;
           margin-top: 1rem;
           line-height: 1.04;
           opacity: 0.45;
           padding-left: 30px;
           padding-right: 30px;
-          text-transform: lowercase;
+     
         }
         .legal-mentions a {
           color: #aaa;

@@ -405,8 +405,7 @@ const AboutPage = () => {
                   <Image
                     src={section.image}
                     alt={section.alt}
-                    // width={800}
-                    // height={1000}
+                   
                     fill={true} 
                     className={styles.sectionImage}
                     ref={el => imagesRef.current[index] = el}

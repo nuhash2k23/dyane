@@ -1,4 +1,3 @@
-// components/ContactForm.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/ContactForm.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
@@ -25,7 +24,6 @@ const ContactForm = () => {
     message: '',
     consent: false
   });
-  
   
   // Initialize Lenis and header scroll behavior
   useEffect(() => {
@@ -123,29 +121,6 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      
-      if (res.ok) {
-        // Handle successful submission
-        setSubmitted(true);
-        // Reset form fields, etc.
-      } else {
-        const errorData = await res.json();
-        console.error("Error:", errorData.error);
-      }
-    } catch (error) {
-      console.error("Request failed:", error);
-    }
-  };
-  
   // Animation on component mount
   useEffect(() => {
     gsap.fromTo(
@@ -205,6 +180,47 @@ const ContactForm = () => {
     }
   };
 
+  // Handle form submission with Formspree
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Get the form element
+    const form = e.target;
+    
+    // Create form data from our state
+    const formData = new FormData(form);
+    
+    // Submit the form to Formspree
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          // Form successfully submitted
+          setSubmitted(true);
+          // Reset form fields
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+            consent: false
+          });
+        } else {
+          // Handle error
+          response.json().then(data => {
+            console.error('Form submission error:', data);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Form submission error:', error);
+      });
+  };
+
   return (
     <div className={styles.pageWrapper}>
       <div ref={headerRef} className={styles.headerWrapper} style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, opacity: 1 }}>
@@ -217,7 +233,12 @@ const ContactForm = () => {
           <p className={styles.intro}>{content[language].intro}</p>
           
           {!submitted ? (
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form 
+              action="https://formspree.io/f/xyzeejkn" // Replace with your actual Formspree form ID
+              method="POST"
+              className={styles.form}
+              onSubmit={handleSubmit}
+            >
               <div className={styles.field}>
                 <label htmlFor="name">{content[language].name}</label>
                 <input 
@@ -267,6 +288,13 @@ const ContactForm = () => {
                   {content[language].consent}
                 </label>
               </div>
+              
+              {/* Prevent spam with honeypot field */}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} />
+              
+              {/* Add the current language as a hidden field */}
+              <input type="hidden" name="language" value={language} />
+              
               <button type="submit" className={styles.submitButton}>
                 {content[language].submit}
               </button>
@@ -277,7 +305,7 @@ const ContactForm = () => {
               <p>{content[language].confirmation}</p>
             </div>
           )}
-          
+          <h3 className={styles.email}> Or you can contact directly contact@dyaneparis.com</h3>
           <p className={styles.privacy}>
             <a href="/privacy-policy">{content[language].privacy}</a>
           </p>
