@@ -160,8 +160,8 @@ const Home = () => {
                         <a href="/Contact">{currentContent.footer.links.contact}</a>
                       </div>
                       <div className={styles.footerLinks}>
-                        <a href="/Terms">{currentContent.footer.links.terms}</a>
-                        <a href="/Legal">{currentContent.footer.links.legal}</a>
+                        <a className={styles.footerLinksterms} href="/Terms">{currentContent.footer.links.terms}</a>
+                        <a className={styles.footerLinkslegal} href="/Legal">{currentContent.footer.links.legal}</a>
                      
                       </div>
                       

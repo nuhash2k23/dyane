@@ -257,7 +257,7 @@ background-image: url('/public/LogoDYANE_blanc.png');
   
   .textContent p {
     font-size: 1.1rem;
-    line-height: 1.6;
+    /* line-height: 1.6; */
   }
   
   .signature {
@@ -273,7 +273,8 @@ background-image: url('/public/LogoDYANE_blanc.png');
   }
   
   .footerLinks a {
-    font-size: 1rem;
+    font-size: .8rem;
+    text-align: center;
   }
 }
 
