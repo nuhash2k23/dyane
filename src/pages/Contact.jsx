@@ -305,7 +305,7 @@ const ContactForm = () => {
               <p>{content[language].confirmation}</p>
             </div>
           )}
-          <h3 className={styles.email}> Or you can contact directly contact@dyaneparis.com</h3>
+          <h3 className={styles.email}> Or you can contact directly <a classname={styles.emaildyane} href="mailto:contact@dyaneparis.com.com">contact@dyaneparis.com</a></h3>
           <p className={styles.privacy}>
             <a href="/privacy-policy">{content[language].privacy}</a>
           </p>
@@ -336,7 +336,7 @@ const ContactForm = () => {
           margin: 0;
           padding: 0;
         }
-        
+      
         .${styles.pageWrapper} {
           font-family: "CasusPro", sans-serif;
           position: relative;

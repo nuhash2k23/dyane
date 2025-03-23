@@ -12,6 +12,14 @@
   font-weight: normal;
   font-style: normal;
 }
+.email{
+ font-family: "CasusPro" !important;
+ transform:translateY(2.75vh);
+ font-size: 1rem;
+ font-weight: 200;
+ color: #ececec9f;
+}
+
 .pageContainer {
   min-height: 100vh;
   display: flex;
