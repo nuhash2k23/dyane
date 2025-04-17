@@ -7,6 +7,7 @@ import styles from '../styles/AboutPage.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
 import Header from '../Component/Header';
 import Footer from '@/Component/Footer';
+import Head from 'next/head';
 
 // Register ScrollTrigger plugin if we're in the browser
 if (typeof window !== 'undefined') {
@@ -380,6 +381,26 @@ const AboutPage = () => {
   const currentContent = content[language];
 
   return (
+    <><Head>
+    <title>À propos | Dyane Paris – Cocktails Artistiques en Bouteille de Céramique</title>
+    <meta name="description" content="Découvrez l'histoire de Dyane Paris : cocktails prêts à boire, conçus à la main, servis dans des statues en céramique. Luxe, design et saveurs mythologiques." />
+    <meta name="keywords" content="À propos Dyane, Dyane Paris, Dyane cocktails, bouteille de céramique, cocktail artistique, cocktail de luxe, statue cocktail, processus artisanal" />
+    <link rel="canonical" href="https://dyaneparis.com/about" />
+  
+    {/* Open Graph / Facebook */}
+    <meta property="og:title" content="À propos de Dyane | Cocktails Artistiques en Céramique" />
+    <meta property="og:description" content="L'univers de Dyane : des créations inspirées de la mythologie grecque, servies dans des bouteilles d'art en céramique. Découvrez notre vision, notre processus et notre produit." />
+    <meta property="og:url" content="https://dyaneparis.com/about" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dyaneparis.com/preview.jpg" />
+  
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="À propos de Dyane | Cocktails Artistiques en Céramique" />
+    <meta name="twitter:description" content="Un savoir-faire français pour réinventer l'expérience cocktail en statues de céramique. Découvrez Dyane Paris." />
+    <meta name="twitter:image" content="https://dyaneparis.com/preview.jpg" />
+  </Head>
+
     <div className={styles.pageWrapper}>
       <div ref={headerRef} className={styles.headerWrapper}>
         <Header />
@@ -482,6 +503,7 @@ const AboutPage = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

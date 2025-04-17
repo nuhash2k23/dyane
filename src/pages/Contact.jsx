@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 import Footer from '@/Component/Footer';
+import Head from 'next/head';
 
 // Register ScrollTrigger plugin if we're in the browser
 if (typeof window !== 'undefined') {
@@ -222,6 +223,26 @@ const ContactForm = () => {
   };
 
   return (
+    <><Head>
+    <title>Contact Dyane Paris | Cocktails de Luxe et Bouteilles Artistiques</title>
+    <meta name="description" content="Contactez Dyane Paris pour en savoir plus sur nos cocktails prêts à boire de luxe, en bouteilles artistiques de céramique. B2B uniquement, répondons à vos besoins en clubs, hôtels et restaurants haut de gamme." />
+    <meta name="keywords" content="Dyane contact, Dyane Paris, Dyane cocktails, bouteille de céramique, cocktail artistique, Pornstar Martini Dyane, cocktail de luxe, contact cocktail haut de gamme" />
+    <link rel="canonical" href="https://dyaneparis.com/contact" />
+  
+    {/* Open Graph tags */}
+    <meta property="og:title" content="Contact Dyane Paris | Cocktails de Luxe Artistiques" />
+    <meta property="og:description" content="Des questions sur nos cocktails en bouteilles de céramique ? Contactez Dyane Paris dès maintenant pour collaborer avec notre marque B2B de luxe." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dyaneparis.com/contact" />
+    <meta property="og:image" content="https://dyaneparis.com/preview.jpg" />
+  
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Dyane Paris | Cocktails de Luxe Artistiques" />
+    <meta name="twitter:description" content="Vous êtes un hôtel ou un restaurant haut de gamme ? Contactez-nous pour découvrir nos cocktails prêts à boire dans des bouteilles en céramique exclusives." />
+    <meta name="twitter:image" content="https://dyaneparis.com/preview.jpg" />
+  </Head>
+
     <div className={styles.pageWrapper}>
       <div ref={headerRef} className={styles.headerWrapper} style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, opacity: 1 }}>
         <Header />
@@ -394,6 +415,7 @@ const ContactForm = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

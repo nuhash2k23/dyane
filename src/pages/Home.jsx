@@ -6,6 +6,8 @@ import Headerhome from '../Component/Headerhome';
 import styles from '../styles/Home.module.css';
 import { useLanguage } from '../Component/context/LanguageContext';
 import { Model2 } from '@/Component/Model2';
+import Head from 'next/head';
+
 
 const Home = () => {
   // Get language directly from context
@@ -119,6 +121,48 @@ const Home = () => {
 
   return (
     <>
+    <Head>
+  {/* Title and Favicon */}
+  <title>Dyane Paris | Cocktails de Luxe en Bouteilles de Céramique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="/favicon.ico" />
+
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="Découvrez Dyane, une marque de cocktails de luxe prêts à boire, présentés dans des bouteilles artistiques en céramique. Des créations uniques, inspirées de la mythologie grecque, conçues pour clubs, hôtels, restaurants haut de gamme."
+  />
+
+  {/* Keywords */}
+  <meta
+    name="keywords"
+    content="Dyane Paris, Dyane cocktails, cocktails de luxe, bouteille de céramique, cocktail artistique, Pornstar Martini Dyane, Moscow Mule Dyane, cocktails 6L, statue céramique cocktail, cocktail prêt à boire, cocktail haut de gamme"
+  />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://dyaneparis.com/" />
+
+  {/* Open Graph for social media */}
+  <meta property="og:title" content="Dyane Paris – Cocktails Artistiques de Luxe" />
+  <meta
+    property="og:description"
+    content="Des cocktails premium en statues de céramique, inspirés de la mythologie grecque. Disponible en 75cl à 12L avec robinet intégré. Dyane révolutionne l’univers du cocktail."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dyaneparis.com/" />
+  <meta property="og:image" content="https://dyaneparis.com/preview.jpg" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dyane Paris – Cocktails Artistiques de Luxe" />
+  <meta
+    name="twitter:description"
+    content="Cocktails prêts à boire en statues de céramique. Luxe, design, et innovation réunis dans un seul produit."
+  />
+  <meta name="twitter:image" content="https://dyaneparis.com/preview.jpg" />
+</Head>
+
     <div className={styles.container}>
       <div className={styles.canvasContainer}>
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 4], fov: 40 }}>
