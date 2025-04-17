@@ -235,6 +235,7 @@ const ContactForm = () => {
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dyaneparis.com/contact" />
     <meta property="og:image" content="https://dyaneparis.com/preview.jpg" />
+    <meta name="google-site-verification" content="D2tCPMxF1aHMQF4lLMJeaWjuiKpSB4fvUbrg-tYfz-o" />
   
     {/* Twitter Card */}
     <meta name="twitter:card" content="summary_large_image" />

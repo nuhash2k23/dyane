@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from 'next/head';
 
 const AgeDetect = () => {
   const router = useRouter();
@@ -133,6 +134,13 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
   };
 
   return (
+    <><Head>
+    <meta name="google-site-verification" content="D2tCPMxF1aHMQF4lLMJeaWjuiKpSB4fvUbrg-tYfz-o" />
+    <title>Dyane Paris – Cocktails de Luxe en Bouteilles Artistiques</title>
+    <meta name="description" content="Accédez à l'univers de Dyane Paris après vérification d'âge : cocktails artistiques prêts à boire, en bouteilles de céramique inspirées de la mythologie grecque." />
+    <meta name="robots" content="noindex, nofollow" />
+  </Head>
+
     <div className="age-gate-container">
       {/* Logo */}
       <Image 
@@ -358,6 +366,7 @@ En accédant à ce site, vous déclarez accepter nos conditions générales d'ut
         }
       `}</style>
     </div>
+    </>
   );
 };
 

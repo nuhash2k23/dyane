@@ -133,7 +133,7 @@ const Home = () => {
     name="description"
     content="Découvrez Dyane, une marque de cocktails de luxe prêts à boire, présentés dans des bouteilles artistiques en céramique. Des créations uniques, inspirées de la mythologie grecque, conçues pour clubs, hôtels, restaurants haut de gamme."
   />
-
+  <meta name="google-site-verification" content="D2tCPMxF1aHMQF4lLMJeaWjuiKpSB4fvUbrg-tYfz-o" />
   {/* Keywords */}
   <meta
     name="keywords"
