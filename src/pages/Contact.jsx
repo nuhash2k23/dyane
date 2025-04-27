@@ -256,7 +256,7 @@ const ContactForm = () => {
           
           {!submitted ? (
             <form 
-              action="https://formspree.io/f/xyzeejkn" // Replace with your actual Formspree form ID
+              action="https://formspree.io/f/mpwdwbzw" // Replace with your actual Formspree form ID
               method="POST"
               className={styles.form}
               onSubmit={handleSubmit}
