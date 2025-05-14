@@ -55,13 +55,13 @@ const TermsAndConditions = () => {
         <h2>Qui contacter pour toutes les demandes liées au RGPD ?</h2>
         <p>Pour exercer vos droits, vous pouvez nous contacter :</p>
         <address>
-          Dyane Paris<br />
-          SASU au capital de 8.000 euros.<br />
-          En cours d'immatriculation<br />
-          Adresse : 14 rue du Dobropol<br />
-          Téléphone : 0768328714<br />
-          Responsable : Elisa Evrard Ordonez<br />
-          Contact : 0768328714 ou <a href="mailto:contact@dyaneparis.com">contact@dyaneparis.com</a>
+           Dyane Paris<br />
+           SASU au capital social de 5000 euros<br />
+           Numéro d’immatriculation : 943 829 002 R.C.S Paris<br />
+           SIREN : 94382900200014 <br />
+           N° tél : + 33 7 68 32 87 14 <br />
+           adresse du siège social : 14 rue du Dobropol 75017 PARIS, France <br />
+         
         </address>
       </section>
       

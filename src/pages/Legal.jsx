@@ -18,13 +18,15 @@ const MentionsLegales = () => {
         
         <div className="info-block">
           <ul>
-            <li><span className="label">Nom de l'entreprise :</span> Dyane Paris</li>
-            <li><span className="label">Forme juridique :</span> SASU (en cours de formalisation)</li>
-            <li><span className="label">Siège social :</span> 14 rue du Dobropol, 75017, Paris</li>
-            <li><span className="label">Tél :</span> +33 7 68 32 87 14</li>
-            <li><span className="label">E-mail :</span> <a href="mailto:contact@dyaneparis.com">contact@dyaneparis.com</a></li>
-            <li><span className="label">Capital social :</span> 8.000 EUR</li>
-            <li><span className="label">Immatriculation :</span> (en cours de formalisation)</li>
+            <li><span className="label"></span> Dyane Paris</li>
+            <li><span className="label"></span> SASU au capital social de 5 000 euros</li>
+            <li><span className="label"> Numéro d’immatriculation : </span>943 829 002 R.C.S Paris </li>
+            <li><span className="label">SIREN : </span> 94382900200014 </li>
+            <li><span className="label">N° tél : </span>  + 33 7 68 32 87 14 </li>
+
+       
+         
+            <li><span className="label">adresse du siège social :</span> 14 rue du Dobropol 75017 PARIS, France</li>
           </ul>
         </div>
       </div>

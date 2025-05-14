@@ -191,14 +191,14 @@ background-image: url('/public/LogoDYANE_blanc.png');
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: .7rem;
 }
 
 .footerLinks a {
   font-family: 'CasusPro', sans-serif;
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   position: relative;
   transition: color 0.3s;
   pointer-events: auto; /* Ensure links are clickable */
