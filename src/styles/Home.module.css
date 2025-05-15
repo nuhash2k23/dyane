@@ -284,7 +284,7 @@ background-image: url('/public/LogoDYANE_blanc.png');
     margin-right: 0;
     text-align: right;
     margin-top: 0vh;
-  transform: translateX(-15vw);
+  transform: translateX(0vw);
 
    
   }
@@ -299,7 +299,7 @@ background-image: url('/public/LogoDYANE_blanc.png');
   .textContent p {
     width: 100%;
     font-size: 0.92rem;
-    padding-left: 35vw;
+    /* padding-left: 35vw; */
     padding-right: 0;
     scale: .7;
     transform: translateY(-10vh);

@@ -218,7 +218,7 @@ const Home = () => {
                 </div>
               </Scroll>
             </ScrollControls>
-            <Environment files="./studio_small_09_1k.hdr"  environmentIntensity={.50}  />
+            <Environment files="./studio_small_09_1k.hdr"  environmentIntensity={.5}  />
           </Suspense>
         </Canvas>
         <Loader />
@@ -292,7 +292,8 @@ const Home = () => {
 
       @media (max-width: 576px) {
         .${styles.laterSection} .${styles.textContent} {
-          margin-top: -25vh !important; /* Move up even more on mobile */
+          margin-top: -25vh !important;
+          
         }
         
         .${styles.laterSection} .${styles.sectionTitle} {
