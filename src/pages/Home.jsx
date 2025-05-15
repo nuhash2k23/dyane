@@ -122,7 +122,7 @@ const Home = () => {
   return (
     <>
     <Head>
-  {/* Title and Favicon */}
+
   <title>Dyane Paris | Cocktails de Luxe en Bouteilles de Céramique</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
@@ -218,7 +218,7 @@ const Home = () => {
                 </div>
               </Scroll>
             </ScrollControls>
-            <Environment files="./studio_small_09_1k.hdr"  environmentIntensity={.53}  />
+            <Environment files="./studio_small_09_1k.hdr"  environmentIntensity={.50}  />
           </Suspense>
         </Canvas>
         <Loader />
