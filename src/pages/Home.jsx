@@ -48,7 +48,7 @@ const Home = () => {
           text: " Dyane Paris, ce sont de délicieux cocktails prêts-à-boire dans de prestigieuses bouteilles en porcelaine inspirées de la mythologie grecque de 70 cl à 12L. Pour boire Dyane, on retire la tête et on verse. Nos cocktails sont préparés en France avec des ingrédients de qualité supérieure. L’alliance parfaite entre luxe, goût et design.",
         },
         {
-          title: "Exclu Quand l'Art Rencontre l'Exception",
+          title: "Quand l'Art Rencontre l'Exception",
           text: " Toutes nos créations s’harmonisent avec la direction artistique de votre établissement, sublimant votre décor et captivant vos clients dès le premier regard. Chaque pièce est façonnée à la main par un atelier de céramistes passionnés, qui sculptent et peignent avec soin nos bouteilles uniques. Notre design donne naissance à de véritables objets d’art, que vos invités auront envie d'emporter chez eux, prolongeant ainsi l'expérience Dyane au-delà de votre établissement pour créer de la fidélisation. "
         },
         {
@@ -60,7 +60,7 @@ const Home = () => {
           text: " Chaque création Dyane est le fruit d’une incubation minutieuse d’environ trente jours. À la carte, nous vous proposons nos recettes signatures : le Pornstar Martini (28% vol.) et le Moscow Mule (27% vol.). Nous recherchons des saveurs à la fois puissantes et raffinées, tout en préservant un haut degré d’alcool pour une expérience authentique. Pour l’élaboration de notre Moscow Mule, nous travaillons directement avec de l’alcoolvinique à 96% vol., infusé lentement avec des graines de gingembre et du jus de citron frais, afin de capturer toute l’intensité de leurs arômes. Notre Pornstar Martini, quant à lui, mise sur la subtilité de la vanille pour sublimer un fruit de la passion délicatement aromatisé, véritable invitation à l’évasion des sens. Nous vous offrons également la possibilité de cocréer votre propre recette, en étroite collaboration avec notre équipe. Après une analyse précise de vos attentes, nous lançons une phase de R&D dédiée, avec plusieurs échantillons personnalisés jusqu’à validation finale. Notre distillerie, forte de plus de 35 ans d’expertise, saura donner vie à vos ambitions avec rigueur et excellence."
         },
         {
-          title: ": L'Art du Cocktail Prêt-à-Boire pour les Adresses d'Exception",
+          title: "L'Art du Cocktail Prêt-à-Boire pour les Adresses d'Exception",
           text: " Car notre mission est de vous satisfaire au mieux, nous proposons également des créations sans alcool, offrant une expérience sensorielle tout aussi raffinée et savoureuse. Aujourd'hui, aucune offre premium et artistique de cocktails prêts à boire n’existe en France, spécifiquement pensée pour les lieux prestigieux et culturels. Notre ambition : rendre ce format désirable en nous concentrant exclusivement sur une distribution B2B, auprès d'établissements d'exception soigneusement sélectionnés, dont le positionnement haut de gamme s'aligne parfaitement avec notre vision. Clubs privés, restaurants festifs ou gastronomiques, bars élégants, casinos et palaces : Dyane s’invitera dans vos adresses les plus emblématiques. Fidèles à nos valeurs d’exigence et d’authenticité, nous collaborons uniquement avec des partenaires partageant notre quête d’excellence, et refusons toute distribution hors de ce cadre exclusif. ",
           signature: "Plus qu'un cocktail, une émotion. Plus qu'un produit, une signature."
         }
